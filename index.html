@@ -8,35 +8,83 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>EPHS</title>         
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
-        header { text-align: center; margin-bottom: 2em; }
-        h1 { color: #2c3e50; }
-        p { text-align: left; line-height: 1.1; }
-     .menu {
-      display: flex;
-      justify-content: center;   /* center horizontally */
-      align-items: center;       /* align vertically */
-      gap: 3px;
-      padding: 6px;
-    }
-    .menu a {
-      text-decoration: none;
-    }
-    .menu button {
-      padding: 10px 10px;
-      font-size: 14px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background-color: #2563eb;
-      color: white; 
-	  margin: 6px;
-	}
-    .menu button:hover {
-      background-color: #1e40af;
-    }
-   </style>
+
+<style>
+/* Page styles */
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 40px; 
+  background-color: lightblue;  /* keeps your light blue background */
+}
+
+header { 
+  text-align: center; 
+  margin-bottom: 2em; 
+}
+
+h1 { 
+  color: #2c3e50; 
+}
+
+p { 
+  text-align: left; 
+  line-height: 1.1; 
+}
+
+/* Base menu styling (desktop) */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  flex-wrap: nowrap;  /* single row by default */
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu button {
+  padding: 10px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+  margin: 6px;
+  white-space: nowrap; /* prevent text wrap inside button */
+}
+
+.menu button:hover {
+  background-color: #1e40af;
+}
+
+/* Mobile-responsive adjustments */
+@media (max-width: 600px) {
+  .menu {
+    flex-wrap: wrap;   /* allow buttons to wrap */
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .menu button {
+    padding: 8px 6px;
+    font-size: 12px;
+    flex: 1 1 45%;      /* roughly 2 per row */
+    min-width: 120px;
+  }
+}
+
+/* Stack buttons on very narrow screens */
+@media (max-width: 400px) {
+  .menu button {
+    flex: 1 1 100%;    /* full width buttons */
+  }
+}
+</style>
+
   </head>
   <body>
     <header>
@@ -53,14 +101,14 @@
     
   <meta charset="UTF-8">
   <title>Button Menu</title>
-  <nav class="menu">
-    <a href="index.html"><button>HOME</button></a>
-    <a href="support.html"><button>Support EPHS</button></a>
-    <a href="events.html"><button>Program Events</button></a>
-    <a href="scholarship.html"><button>Scholarship</button></a>
-    <a href="museum.html"><button>Museum Index</button></a>
-    <a href="subscribe.html"><button>Subscribe</button></a>
-  </nav>
+ <nav class="menu">
+  <a href="index.html"><button>HOME</button></a>
+  <a href="support.html"><button>Support EPHS</button></a>
+  <a href="events.html"><button>Program Events</button></a>
+  <a href="scholarship.html"><button>Scholarship</button></a>
+  <a href="museum.html"><button>Museum Index</button></a>
+  <a href="subscribe.html"><button>Subscribe</button></a>
+</nav>
 	  
      <h2>Resources</h2> 
        <p><a href="https://drive.google.com/file/d/1UHNgT0kwj72PTH19OugX44V52in0w62O/view?usp=drive_link">2026 Speaker Programs</a></p>
