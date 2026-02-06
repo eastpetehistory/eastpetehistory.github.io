@@ -12,8 +12,31 @@
         body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
         header { text-align: center; margin-bottom: 2em; }
         h1 { color: #2c3e50; }
-        p { line-height: 1.1; }
-    </style>
+        p { text-align: left; line-height: 1.1; }
+     .menu {
+      display: flex;
+      justify-content: center;   /* center horizontally */
+      align-items: center;       /* align vertically */
+      gap: 3px;
+      padding: 6px;
+    }
+    .menu a {
+      text-decoration: none;
+    }
+    .menu button {
+      padding: 10px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #2563eb;
+      color: white; 
+	  margin: 6px;
+	}
+    .menu button:hover {
+      background-color: #1e40af;
+    }
+   </style>
   </head>
   <body>
     <header>
@@ -21,13 +44,24 @@
 		<br><img style="text-align: left;" src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="33%"> 
         <p><img src="images/EPHS Working Gardens 16x9.jpg" alt="EPHS WG 16x9" width="100%"></p>
 
-  	    <h2>About Us </h2>
-        <p style="text-align: left;"> Founded in 1974, our mission is uncovering, preserving and sharing the history of our community and the surrounding area. </p>
-	    <p style="text-align: left;"> Our <strong>Museum</strong> at 1905 State Street is the historic Wolf House located on the NE corner Lemon and State streets 
-          in East Petersburg with free parking behind the building off of Lemon St. </p>
-	    <p style="text-align: left;"> We are open to the public each <strong>first Saturday of the month</strong> from 9:00 AM to noon.  
+  	 <h2>About Us </h2>
+	    <p> Founded in 1974, our non-profit mission is uncovering, preserving and sharing the history of our community and the surrounding area. </p>
+	    <p> Our <strong>Museum</strong> at 1905 State Street is the historic Wolf House located on the NE corner Lemon and State streets 
+          in East Petersburg with free parking behind the building off of Lemon Street. </p>
+	    <p> We are open to the public each <strong>first Saturday of the month</strong> from <strong>9:00 AM to Noon</strong>.  
           Visits are also welcome by request or any time you see our OPEN flag out, just walk right in the front door. </p> 
-      
+    
+  <meta charset="UTF-8">
+  <title>Button Menu</title>
+  <nav class="menu">
+    <a href="index.html"><button>HOME</button></a>
+    <a href="support.html"><button>Support EPHS</button></a>
+    <a href="events.html"><button>Program Events</button></a>
+    <a href="scholarship.html"><button>Scholarship</button></a>
+    <a href="museum.html"><button>Museum Index</button></a>
+    <a href="subscribe.html"><button>Subscribe</button></a>
+  </nav>
+	  
      <h2>Resources</h2> 
         <p><a href="https://drive.google.com/file/d/18_z0N7nfcQKebiHUp0Lul5ESR9dEvNHg/view?usp=sharing">Membership Trifold</a></p>
         <p><a href="https://drive.google.com/file/d/1L7BZdrgS2HBFArNnCVlOqbueig15Aqz1/view?usp=sharing">Deed of Gift form</a></p>
@@ -41,10 +75,11 @@
     <main>
         <h2>Contact Us</h2>
         <h3>email</h3>
-        <p><a href="mailto:info@eastpetehistory.org?subject=Inquiry%20via%20EPHS%20Website&body=Hello%20EPHS%2C%20I%20have%20a%20question...">info@eastpetehistory.org (general inquiry)</a></p>
-		<p><a href="mailto:maurersiv@gmail.com?subject=Website%20Inquiry&body=Hello%20Sam%2C%20I%20have%20a%20question...">EPHS President Samuel Maurer IV</a></p>
-        <p><a href="mailto:ephs.finances@gmail.com?subject=Website%20Inquiry&body=Hello%20Michelle%2C%20I%20have%20a%20question...">Treasurer</a></p>
-        <p><a href="mailto:ephs1905@gmail.com?subject=Website%20Inquiry&body=Hello%20Mark%2C%20I%20have%20a%20question...">Archivist/Curator & Website administrator</a></p>   
+        <p>General Inquiry  <a href="mailto:info@eastpetehistory.org?subject=Inquiry%20via%20EPHS%20Website&body=Hello%20EPHS%2C%20I%20have%20a%20question...">
+		<button>info@eastpetehistory.org</button></a></p>
+		<p>EPHS President  <a href="mailto:maurersiv@gmail.com?subject=Website%20Inquiry&body=Hello%20Sam%2C%20I%20have%20a%20question..."><button>Samuel Maurer IV</button></a></p>
+        <!-- <p><a href="mailto:ephs.finances@gmail.com?subject=Website%20Inquiry&body=Hello%20Michelle%2C%20I%20have%20a%20question...">Treasurer</a></p> -->
+          <p>Wolf House Museum <a href="mailto:ephs1905@gmail.com?subject=Website%20Inquiry&body=Hello%20Mark%2C%20I%20have%20a%20question..."> <button>Archivist/Curator/WebsiteAdmin</button></a></p>   
         <h3>Phone</h3>
         <p>The previous EPHS phone number ending in 9048 is no longer available; voice messaging is not presently supported.</p>
         <h3>Address</h3>
