@@ -8,130 +8,108 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>EPHS</title>         
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
+        header { text-align: center; margin-bottom: 2em; }
+        h1 { color: #2c3e50; }
+        p { text-align: left; line-height: 1.2; }
 
-<style>
-/* Page styles */
-body { 
-  font-family: Arial, sans-serif; 
-  margin: 40px; 
-  background-color: lightblue;  /* keeps your light blue background */
+        /* --- Navigation Menu (FIXED, VALID HTML) --- */
+        nav.menu {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          padding: 6px;
+          flex-wrap: nowrap;
+        }
+        .nav-btn {
+          margin: 4px;
+		  display: inline-block;
+          padding: 10px 8px;
+          font-size: 12px;
+          border-radius: 14px;
+          background-color: #2563eb;
+          color: white;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+        .nav-btn:hover {
+          background-color: #1e40af;
+        }
+/* Tablet / small screens */
+@media (max-width: 600px) {
+  nav.menu { flex-wrap: wrap; }
+  .nav-btn { flex: 1 1 45%; text-align: center; font-size: 13px; }
 }
 
-header { 
-  text-align: center; 
-  margin-bottom: 2em; 
+/* Very small phones */
+@media (max-width: 400px) {
+  .nav-btn { flex: 1 1 100%; }
 }
 
-h1 { 
-  color: #2c3e50; 
-}
-
-p { 
-  text-align: left; 
-  line-height: 1.1; 
-}
-
-/* Base menu styling (desktop) */
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  padding: 6px;
-  flex-wrap: nowrap;  /* single row by default */
-}
-
-.menu a {
-  text-decoration: none;
-}
-
-.menu button {
-  padding: 10px 10px;
-  font-size: 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.action-btn {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 14px;
   background-color: #2563eb;
   color: white;
-  margin: 6px;
-  white-space: nowrap; /* prevent text wrap inside button */
+  text-decoration: none;
 }
-
-.menu button:hover {
-  background-color: #1e40af;
-}
-
-/* Mobile-responsive adjustments */
-@media (max-width: 600px) {
-  .menu {
-    flex-wrap: wrap;   /* allow buttons to wrap */
-    gap: 4px;
-    padding: 4px;
-  }
-
-  .menu button {
-    padding: 8px 6px;
-    font-size: 12px;
-    flex: 1 1 45%;      /* roughly 2 per row */
-    min-width: 120px;
-  }
-}
-
-/* Stack buttons on very narrow screens */
-@media (max-width: 400px) {
-  .menu button {
-    flex: 1 1 100%;    /* full width buttons */
-  }
-}
-</style>
-
+    </style>
   </head>
   <body>
+     
+  <nav class="menu">
+  <a href="index.html" class="nav-btn">HOME</a>
+  <a href="support.html" class="nav-btn">Support EPHS</a>
+  <a href="events.html" class="nav-btn">Program Events</a>
+  <a href="scholarship.html" class="nav-btn">Scholarship</a>
+  <a href="museum.html" class="nav-btn">Museum Index</a>
+  <a href="subscribe.html" class="nav-btn">Subscribe</a>
+  </nav> 
+ 
     <header>
-<h1 style="text-align:center;">Welcome to East Petersburg Historical Society</h1>
-<img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="20%" style="display:block; margin: 1em auto;">
-<img src="images/EPHS Working Gardens 16x9.jpg" alt="EPHS WG 16x9" width="80%" style="display:block; margin: 1em auto;">
+      <h1>Welcome to East Petersburg Historical Society</h1>
+      <img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="25%" style="display:block; margin: 1em auto;">
+      <img src="images/EPHS Working Gardens 16x9.jpg" alt="EPHS WG 16x9" width="80%" style="display:block; margin: 1em auto;">
+   </header>
 
-  	 <h2>About Us </h2>
-	    <p> Founded in 1974, our non-profit mission is uncovering, preserving and sharing the history of our community and the surrounding area. </p>
-	    <p> Our <strong>Museum</strong> at 1905 State Street is the historic Wolf House located on the NE corner Lemon and State streets 
-          in East Petersburg with free parking behind the building off of Lemon Street. </p>
+    <main>
+	    <h2>About Us </h2>
+	    <p> Founded in 1974, our non-profit mission is uncovering, preserving and sharing the history of our community 
+		and the surrounding area. </p>
+	    <p> Our <strong>Museum</strong> at 1905 State Street is the historic Wolf House located on the NE corner Lemon 
+		and State streets in East Petersburg with free parking behind the building off of Lemon Street. </p>
 	    <p> We are open to the public each <strong>first Saturday of the month</strong> from <strong>9:00 AM to Noon</strong>.  
           Visits are also welcome by request or any time you see our OPEN flag out, just walk right in the front door. </p> 
-    
-  <meta charset="UTF-8">
-  <title>Button Menu</title>
- <nav class="menu">
-  <a href="index.html"><button>HOME</button></a>
-  <a href="support.html"><button>Support EPHS</button></a>
-  <a href="events.html"><button>Program Events</button></a>
-  <a href="scholarship.html"><button>Scholarship</button></a>
-  <a href="museum.html"><button>Museum Index</button></a>
-  <a href="subscribe.html"><button>Subscribe</button></a>
-</nav>
-	  
      <h2>Resources</h2> 
-       <p><a href="https://drive.google.com/file/d/1UHNgT0kwj72PTH19OugX44V52in0w62O/view?usp=drive_link">2026 Speaker Programs</a></p>
+        <p><a href="https://drive.google.com/file/d/1UHNgT0kwj72PTH19OugX44V52in0w62O/view?usp=drive_link">2026 Speaker Programs</a></p>
         <p><a href=" ">Scholarship (coming soon...)</a></p>
-        <p><a href="https://docs.google.com/spreadsheets/d/1WUv1Pct2zWMf_dbEsfvgs7zTzK3WzvndJd1Hs2GQaos/edit?usp=sharing">Index to EPHS Archives and Collections</a></p>
+        <p><a href="https://docs.google.com/spreadsheets/d/1WUv1Pct2zWMf_dbEsfvgs7zTzK3WzvndJd1Hs2GQaos/edit?usp=sharing">
+		Index to EPHS Archives and Collections</a></p>
         <p><a href=" ">Google Sheets Index HELP (coming soon...)</a></p>
-    </header>
-      <div style="background-color: #ffe4b5; padding: 20px;">
-    <main>
+ 
+      <section style="background-color: #ffe4b5; padding: 20px;">
+
         <h2>Contact Us</h2>
         <h3>email</h3>
-        <p>General Inquiry  <a href="mailto:info@eastpetehistory.org?subject=Inquiry%20via%20EPHS%20Website&body=Hello%20EPHS%2C%20I%20have%20a%20question...">
-		<button>info@eastpetehistory.org</button></a></p>
-		<p>EPHS President  <a href="mailto:maurersiv@gmail.com?subject=Website%20Inquiry&body=Hello%20Sam%2C%20I%20have%20a%20question..."><button>Samuel Maurer IV</button></a></p>
-        <!-- <p><a href="mailto:ephs.finances@gmail.com?subject=Website%20Inquiry&body=Hello%20Michelle%2C%20I%20have%20a%20question...">Treasurer</a></p> -->
-          <p>Wolf House Museum <a href="mailto:ephs1905@gmail.com?subject=Website%20Inquiry&body=Hello%20Mark%2C%20I%20have%20a%20question..."> <button>Archivist/Curator/WebsiteAdmin</button></a></p>   
+		
+        <p> General Inquiry <a href="mailto:info@eastpetehistory.org" 
+		class="action-btn">info@eastpetehistory.org</a> </p>
+		
+		<p> EPHS President  <a href="mailto:maurersiv@gmail.com?subject=Website%20Inquiry&body=Hello%20Sam%2C%20I%20have%20a%20question..." 
+		class="action-btn">Samuel Maurer IV</a> </p>
+		
+        <p>Wolf House Museum <a href="mailto:ephs1905@gmail.com?subject=Website%20Inquiry&body=Hello%20Mark%2C%20I%20have%20a%20question..." 
+		class="action-btn"> Archivist/Curator/WebsiteAdmin</a></p>   
+
         <h3>Phone</h3>
         <p>The previous EPHS phone number ending in 9048 is no longer available; voice messaging is not presently supported.</p>
+
         <h3>Address</h3>
         <p>East Petersburg Historical Society <br> 1905 State Street <br> P.O. Box 332 <br> East Petersburg, PA 17520 </p>
         <h3><a href="https://www.facebook.com/EastPeteHistory/">Face Book</a></h3>
-        </main>
-    </div>
-    
+      </section>
+    </main>
   </body>
 </html>

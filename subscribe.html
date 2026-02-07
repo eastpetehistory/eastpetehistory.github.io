@@ -1,85 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
-    <meta name="dcterms.created" content="Sun, 02 Nov 2025 01:11:41 GMT">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title>Subscribe</title>         
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
-        header { text-align: center; margin-bottom: 2em; }
-        h1 { color: #2c3e50; }
-        p { line-height: 1.1; }
-    </style>
-    <header>
-        <h1>Subscribe to EPHS email</h1>
-		<br><img style="text-align: left;" src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="20%"> 
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subscribe</title>
   <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
-        header { text-align: center; margin-bottom: 2em; }
-        h1 { color: #2c3e50; }
-        p { text-align: left; line-height: 1.1; }
-     .menu {
-      display: flex;
-      justify-content: center;   /* center horizontally */
-      align-items: center;       /* align vertically */
-      gap: 3px;
-      padding: 6px;
+    /* --- Page Styles --- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: lightblue;  /* light blue background */
     }
-    .menu a {
+
+    header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    p, ul, li, label {
+      text-align: left;
+      line-height: 1.1;
+      margin-bottom: 1em;
+    }
+
+    /* --- Centered Images --- */
+    header img {
+      display: block;
+      margin: 1em auto;
+    }
+
+    /* --- Navigation Menu --- */
+    nav.menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      flex-wrap: nowrap;  /* desktop single row */
+    }
+
+    nav.menu a {
       text-decoration: none;
     }
-    .menu button {
+
+    nav.menu button {
       padding: 10px 10px;
       font-size: 14px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       background-color: #2563eb;
-      color: white; 
-	  margin: 6px;
-	}
-    .menu button:hover {
+      color: white;
+      margin: 6px;
+      white-space: nowrap; /* prevent wrapping inside button */
+    }
+
+    nav.menu button:hover {
       background-color: #1e40af;
     }
-  ul {
-  text-align: left;
-  list-style-position: inside;
-  padding-right: 1rem;
-  margin-right: 0;
-}
 
-li {
-  padding-right: 0.25rem;   /* fine-tunes spacing per line */
-}
-</style>
-  
+    /* --- Mobile Responsive Menu --- */
+    @media (max-width: 600px) {
+      nav.menu {
+        flex-wrap: wrap;   /* wrap buttons to new lines */
+        gap: 4px;
+        padding: 4px;
+      }
+
+      nav.menu button {
+        padding: 8px 6px;
+        font-size: 12px;
+        flex: 1 1 45%;      /* roughly 2 per row */
+        min-width: 120px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      nav.menu button {
+        flex: 1 1 100%;     /* stack buttons vertically */
+      }
+    }
+
+    /* --- Centered Subscribe Form --- */
+    form.subscribe-form {
+      max-width: 500px;         /* form width */
+      width: 90%;               /* responsive on small screens */
+      margin: 2em auto;         /* centers the form */
+      padding: 1em;
+      background-color: #e0f0ff; /* optional subtle background */
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    form.subscribe-form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    form.subscribe-form button {
+      padding: 12px 25px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    form.subscribe-form button:hover {
+      background-color: #1e40af;
+    }
+  </style>
 </head>
 <body>
 
-  <nav class="menu">
-    <a href="index.html"><button>HOME</button></a>
-    <a href="support.html"><button>Support EPHS</button></a>
-    <a href="events.html"><button>Program Events</button></a>
-    <a href="scholarship.html"><button>Scholarship</button></a>
-    <a href="museum.html"><button>Museum Index</button></a>
-    <a href="subscribe.html"><button>Subscribe</button></a>
-  </nav>
+<header>
+  <h1>Subscribe to EPHS Email</h1>
+  <img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="33%">
+</header>
 
- <h1>Subscribe to East Pete History email</h1>
- <h3>receive event info, date, time, location reminders, members receive quarterly newsletters</h3>
-  
-	    <!-- Begin Mailchimp Signup Form -->
+<nav class="menu">
+  <a href="index.html"><button>HOME</button></a>
+  <a href="support.html"><button>Support EPHS</button></a>
+  <a href="events.html"><button>Program Events</button></a>
+  <a href="scholarship.html"><button>Scholarship</button></a>
+  <a href="museum.html"><button>Museum Index</button></a>
+  <a href="subscribe.html"><button>Subscribe</button></a>
+</nav>
+
+<h2>Subscribe to East Petersburg History Email</h2>
+<p>Receive event info, date/time/location reminders, and quarterly newsletters for members.</p>
+
+<!-- Begin Mailchimp Signup Form -->
 <form 
+  class="subscribe-form"
   action="https://eastpetehistory.us21.list-manage.com/subscribe/post"
   method="POST"
   target="_blank"
   novalidate
-  style="max-width: 50%; margin: 2em auto;"
 >
   <!-- Required hidden fields -->
   <input type="hidden" name="u" value="1a1b86dc32e4a70a93ca49c0e">
@@ -88,25 +154,23 @@ li {
   <!-- Redirect after submit -->
   <input type="hidden" name="redirect" value="https://eastpetehistory.github.io/thank-you.html">
 
-  <label>Email address</label><br>
-  <input type="email" name="MERGE0" required style="width:100%; padding:8px; margin-bottom:10px;">
+  <label>Email address</label>
+  <input type="email" name="MERGE0" required>
 
-  <label>First name</label><br>
-  <input type="text" name="MERGE1" style="width:100%; padding:8px; margin-bottom:10px;">
+  <label>First name</label>
+  <input type="text" name="MERGE1">
 
-  <label>Last name</label><br>
-  <input type="text" name="MERGE2" style="width:100%; padding:8px; margin-bottom:15px;">
+  <label>Last name</label>
+  <input type="text" name="MERGE2">
 
   <!-- Bot protection -->
   <div style="position:absolute; left:-5000px;" aria-hidden="true">
     <input type="text" name="b_1a1b86dc32e4a70a93ca49c0e_0b9bbd1439" tabindex="-1">
   </div>
 
-  <button type="submit" style="padding:12px 25px;">
-    Subscribe
-  </button>
+  <button type="submit">Subscribe</button>
 </form>
 <!-- End Mailchimp Signup Form -->
 
-  </body>
+</body>
 </html>

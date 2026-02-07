@@ -13,63 +13,123 @@
         header { text-align: center; margin-bottom: 2em; }
         h1 { color: #2c3e50; }
         p { line-height: 1.1; }
-    </style>
-    <header>
-        <h1>Support East Petersburg Historical Society</h1>
-		<br><img style="text-align: left;" src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="20%"> 
 
-  <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
-        header { text-align: center; margin-bottom: 2em; }
-        h1 { color: #2c3e50; }
-        p { text-align: left; line-height: 1.1; }
-     .menu {
-      display: flex;
-      justify-content: center;   /* center horizontally */
-      align-items: center;       /* align vertically */
-      gap: 3px;
-      padding: 6px;
-    }
-    .menu a {
-      text-decoration: none;
-    }
-    .menu button {
-      padding: 10px 10px;
-      font-size: 14px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background-color: #2563eb;
-      color: white; 
-	  margin: 6px;
-	}
-    .menu button:hover {
-      background-color: #1e40af;
-    }
-  ul {
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: lightblue;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+p, ul, li, label {
   text-align: left;
-  list-style-position: inside;
-  padding-right: 1rem;
-  margin-right: 0;
+  line-height: 1.3;
+  margin-bottom: 1em;
 }
 
-li {
-  padding-right: 0.25rem;   /* fine-tunes spacing per line */
+/* --- Centered Images --- */
+header img {
+  display: block;
+  margin: 1em auto;
 }
+
+/* --- Navigation Menu --- */
+nav.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  flex-wrap: nowrap;
+}
+
+nav.menu a {
+  text-decoration: none;
+}
+
+nav.menu button {
+  padding: 10px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+  margin: 6px;
+  white-space: nowrap;
+}
+
+nav.menu button:hover {
+  background-color: #1e40af;
+}
+
+/* --- Responsive Menu --- */
+@media (max-width: 600px) {
+  nav.menu {
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+  }
+
+  nav.menu button {
+    flex: 1 1 45%;
+    min-width: 120px;
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav.menu button {
+    flex: 1 1 100%;
+  }
+}
+
+/* --- Bullet List Fix: perfectly aligned, responsive --- */
+ul {
+  list-style: disc inside;  /* bullets are inside text block */
+  margin-left: 0;           /* remove default margin */
+  padding-left: 1.5em;      /* space from left edge */
+}
+
+ul li {
+  display: block;
+  margin-bottom: 0.5em;
+  word-wrap: break-word;     /* wrap long words properly */
+}
+
+/* Optional: handle indented <br> in <li> nicely */
+ul li br {
+  content: "";
+  display: block;
+  margin-bottom: 0.2em;
+}
+
 </style>
-  
-</head>
-<body>
 
-  <nav class="menu">
-    <a href="index.html"><button>HOME</button></a>
-    <a href="support.html"><button>Support EPHS</button></a>
-    <a href="events.html"><button>Program Events</button></a>
-    <a href="scholarship.html"><button>Scholarship</button></a>
-    <a href="museum.html"><button>Museum Index</button></a>
-    <a href="subscribe.html"><button>Subscribe</button></a>
-  </nav>
-  
+  </head>
+  <body>
+    
+ <nav class="menu">
+  <a href="index.html"><button>HOME</button></a>
+  <a href="support.html"><button>Support EPHS</button></a>
+  <a href="events.html"><button>Program Events</button></a>
+  <a href="scholarship.html"><button>Scholarship</button></a>
+  <a href="museum.html"><button>Museum Index</button></a>
+  <a href="subscribe.html"><button>Subscribe</button></a>
+</nav>  
+   <header>
+        <h1>Support East Petersburg Historical Society</h1>
+		<br><img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="20%"> 
+</header>
   <hr style="width: 80%; margin: 30px auto; border: 3px solid #0055a5;">
   <h2>Join EPHS to benefit from:</p></h2>
 		
