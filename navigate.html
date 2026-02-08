@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Sun, 02 Nov 2025 01:11:41 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Navigate Google Sheets</title>         
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
+        header { text-align: center; margin-bottom: 2em; }
+        h1 { color: #2c3e50; }
+        p { text-align: left; line-height: 1.2; }
+
+        /* --- Navigation Menu (FIXED, VALID HTML) --- */
+        nav.menu {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          padding: 6px;
+          flex-wrap: nowrap;
+        }
+        .nav-btn {
+          margin: 4px;
+		  display: inline-block;
+          padding: 10px 8px;
+          font-size: 12px;
+          border-radius: 14px;
+          background-color: #2563eb;
+          color: white;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+        .nav-btn:hover {
+          background-color: #1e40af;
+        }
+/* Tablet / small screens */
+@media (max-width: 600px) {
+  nav.menu { flex-wrap: wrap; }
+  .nav-btn { flex: 1 1 45%; text-align: center; font-size: 10px; }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  .nav-btn { flex: 1 1 100%; }
+}
+
+.action-btn {
+  font-size: 12px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 14px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+}
+  table {
+    font-size: 12px;
+    margin: 0 auto; /* centers the table horizontally */
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 500px;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    border: 1px solid #444;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  th {
+    background-color: #f0f0f0;
+  }
+  caption {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+    </style>
+  </head>
+  <body>
+     
+  <nav class="menu">
+  <a href="index.html" class="nav-btn">HOME</a>
+  <a href="support.html" class="nav-btn">Support EPHS</a>
+  <a href="events.html" class="nav-btn">Program Events</a>
+  <a href="scholarship.html" class="nav-btn">Scholarship</a>
+  <a href="museum.html" class="nav-btn">Museum Index</a>
+  <a href="subscribe.html" class="nav-btn">Subscribe</a>
+  </nav> 
+ 
+    <header>
+      <h1>Navigating in our Museum Index <br>...to find your topic</h1>
+      <img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="15%" style="display:block; margin: 1em auto;">
+   </header>
+
+    <main>
+	
+  <table border="1" cellpadding="5" cellspacing="0">
+  <caption>Google Sheets spreadsheet</caption>
+ <thead>
+    <tr>
+      <th>Press</th>
+      <th>To Move</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Arrow Keys</td>
+      <td>one adjacent cell</td>
+    </tr>
+    <tr>
+      <td>Ctrl + Arrow</td>
+      <td>if starting in a non-empty cell: to the next empty cell<br>
+	      if starting in a empty cell: to the next non-empty cell</td>
+    </tr>
+    <tr>
+      <td>Tab</td>
+      <td>Right one column</td>
+    </tr>
+    <tr>
+      <td>Shift + Tab</td>
+      <td>Left one column</td>
+    </tr>
+    <tr>
+      <td>Home</td>
+      <td>To column A in the current row</td>
+    </tr>
+    <tr>
+      <td>Ctrl + Home</td>
+      <td>To the first cell (A1) in the worksheet</td>
+    </tr>
+    <tr>
+      <td>Ctrl + End</td>
+      <td>To the last cell with data in the worksheet</td>
+    </tr>
+    <tr>
+      <td>Page Up</td>
+      <td>Up one screen</td>
+    </tr>
+    <tr>
+      <td>Page Down</td>
+      <td>Down one screen</td>
+    </tr>
+    <tr>
+      <td>Ctrl + F</td>
+      <td>Opens the Find dialog box where you can search for specific data</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+      <img src="images/Top of Index.webp" alt="index headers" width="80%" style="display:block; margin: 1em auto;">
+
+ <table border="1" cellpadding="5" cellspacing="0">
+  <caption>EPHS's Museum Index Headers Explained</caption>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>EPHS#</td><td><u>East Petersburg Historical Society Record (Index) Number</u><br>
+	If the number is a link, hover over it, 
+	then position your curser over the image of the folder that appears just below and left-click.<br>
+	This will show you a Google Drive folder view of files in the record.   
+	You can change the list appearace from file name to image in the upper left; 
+	double click a file or image to open it.</td></tr>
+    <tr><td>Link</td><td><u>Individual file within the record</u><br>
+	If the number is a link, hover over it to see the content, 
+	then position your curser over the content that appears just below to open the file</td></tr>
+    <tr><td>Type</td><td>Identifies the general category or format of the item, designating material 
+	or intellectual form, reflecting its primary documentary or physical format</td></tr>
+    <tr><td>Qty</td><td>Quantity, sometimes but seldomly duplicates</td></tr>
+    <tr><td>Donor</td><td>Person(s0 or organizations who gifted the item</td></tr>
+    <tr><td>Subject</td><td>categorizes the item by its main historical topic, place, or activity, 
+	such as education, transportation, local history, or social life<br>
+	Type = what kind of object it is; Subject = what it’s about</td></tr>
+    <tr><td>Description</td><td>briefly explains what the item is, what it depicts or contains, 
+	and any distinguishing features or context not captured elsewhere - <br>
+	answers one or more of: What is it? What does it show or contain? Why is it notable?</td></tr>
+    <tr><td>Circa</td><td>Associated year (if a range of years, the earliest)</td></tr>
+    <tr><td>Location</td><td><u>Room designation within the Wolf House (WH) Museum</u> 
+1  =  1st Level,
+2  =  2nd Level (upstairs),
+4  =  3rd Level (attic),
+B  =  Basement,
+G  =  Garage,
+F  =  Front (gift shop),
+D  =  Dining (middle) room,
+K  =  Kitchen,
+O  =  Office (upstairs front room),
+C  =  Closet,
+L  =  Library (upstairs middle room),
+A  =  Archive (upstairs back room),
+WC =  Water Closet
+    </td></tr>
+    <tr><td>Unit</td><td>Identifies the specific storage furniture or display piece where the item is physically or digitally housed</td></tr>
+    <tr><td>Level</td><td>Shelf # or Drawer # or compass direction</td></tr>
+    <tr><td>Container Label</td><td>Content indicator; Note that a container may be shared, but not have more than one label</td></tr>
+    <tr><td>Size</td><td>General dimensions of the container</td></tr>
+    <tr><td>Verified</td><td>Checked if the item has been seen in its place in recent times</td></tr>
+    <tr><td>(original) Container Label</td><td>prior to 2025</td></tr>
+    <tr><td>old-Location</td><td>prior to 2025</td></tr>
+    <tr><td>old-Size</td><td>prior to 2025</td></tr>
+  </tbody>
+</table>
+<br>
+<h3>IMPORTANT:  If you do not see what you are looking for, or, you see an unlinked item or inicomplete or inacurate description, 
+let the archivst/curator know.  It could be there is more at the museum yet to be documented, or. it couold be investigated.  
+This is why we're here.
+    </main>
+
+  </body>
+</html>
