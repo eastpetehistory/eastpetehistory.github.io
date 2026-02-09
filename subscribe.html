@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Subscribe</title>
+
   <style>
-    /* --- Page Styles --- */
+    /* --- Base Page Styles --- */
     body {
       font-family: Arial, sans-serif;
       margin: 40px;
-      background-color: lightblue;  /* light blue background */
+      background-color: lightblue;
     }
 
     header {
@@ -17,20 +19,22 @@
       margin-bottom: 2em;
     }
 
-    h1 {
+    h1, h2 {
       color: #2c3e50;
     }
 
-    p, ul, li, label {
-      text-align: left;
-      line-height: 1.1;
+    p, label {
+      line-height: 1.3;
       margin-bottom: 1em;
+      display: block;
     }
 
-    /* --- Centered Images --- */
+    /* --- Header Image --- */
     header img {
       display: block;
       margin: 1em auto;
+      width: 25%;
+      max-width: 300px;
     }
 
     /* --- Navigation Menu --- */
@@ -40,7 +44,8 @@
       align-items: center;
       gap: 6px;
       padding: 6px;
-      flex-wrap: nowrap;  /* desktop single row */
+      flex-wrap: nowrap;
+      margin-bottom: 2em;
     }
 
     nav.menu a {
@@ -48,7 +53,7 @@
     }
 
     nav.menu button {
-      padding: 10px 10px;
+      padding: 10px;
       font-size: 14px;
       border: none;
       border-radius: 6px;
@@ -56,50 +61,50 @@
       background-color: #2563eb;
       color: white;
       margin: 6px;
-      white-space: nowrap; /* prevent wrapping inside button */
+      white-space: nowrap;
     }
 
     nav.menu button:hover {
       background-color: #1e40af;
     }
 
-    /* --- Mobile Responsive Menu --- */
+    /* --- Responsive Navigation --- */
     @media (max-width: 600px) {
       nav.menu {
-        flex-wrap: wrap;   /* wrap buttons to new lines */
+        flex-wrap: wrap;
         gap: 4px;
         padding: 4px;
       }
 
       nav.menu button {
+        flex: 1 1 45%;
+        min-width: 120px;
         padding: 8px 6px;
         font-size: 12px;
-        flex: 1 1 45%;      /* roughly 2 per row */
-        min-width: 120px;
       }
     }
 
     @media (max-width: 400px) {
       nav.menu button {
-        flex: 1 1 100%;     /* stack buttons vertically */
+        flex: 1 1 100%;
       }
     }
 
-    /* --- Centered Subscribe Form --- */
+    /* --- Subscribe Form --- */
     form.subscribe-form {
-      max-width: 500px;         /* form width */
-      width: 90%;               /* responsive on small screens */
-      margin: 2em auto;         /* centers the form */
-      padding: 1em;
-      background-color: #e0f0ff; /* optional subtle background */
+      max-width: 500px;
+      width: 90%;
+      margin: 2em auto;
+      padding: 1.5em;
+      background-color: #e0f0ff;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     form.subscribe-form input {
       width: 100%;
       padding: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
@@ -120,57 +125,67 @@
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Subscribe to EPHS Email</h1>
-  <img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="33%">
-</header>
+  <!-- Header -->
+  <header>
+    <h1>Subscribe to EPHS Email</h1>
+    <img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo">
+  </header>
 
-<nav class="menu">
-  <a href="index.html"><button>HOME</button></a>
-  <a href="support.html"><button>Support EPHS</button></a>
-  <a href="events.html"><button>Program Events</button></a>
-  <a href="scholarship.html"><button>Scholarship</button></a>
-  <a href="museum.html"><button>Museum Index</button></a>
-  <a href="subscribe.html"><button>Subscribe</button></a>
-</nav>
+  <!-- Navigation -->
+  <nav class="menu">
+    <a href="index.html"><button>HOME</button></a>
+    <a href="support.html"><button>Support EPHS</button></a>
+    <a href="events.html"><button>Program Events</button></a>
+    <a href="scholarship.html"><button>Scholarship</button></a>
+    <a href="museum.html"><button>Museum Index</button></a>
+    <a href="subscribe.html"><button>Subscribe</button></a>
+  </nav>
 
-<h2>Subscribe to East Petersburg History Email</h2>
-<p>Receive event info, date/time/location reminders, and quarterly newsletters for members.</p>
+  <!-- Content -->
+  <main>
+    <h2>Subscribe to East Petersburg History Email</h2>
+    <p>
+      Receive event information, date/time/location reminders,
+      and quarterly newsletters for members.
+    </p>
 
-<!-- Begin Mailchimp Signup Form -->
-<form 
-  class="subscribe-form"
-  action="https://eastpetehistory.us21.list-manage.com/subscribe/post"
-  method="POST"
-  target="_blank"
-  novalidate
->
-  <!-- Required hidden fields -->
-  <input type="hidden" name="u" value="1a1b86dc32e4a70a93ca49c0e">
-  <input type="hidden" name="id" value="0b9bbd1439">
+    <!-- Begin Mailchimp Signup Form -->
+    <form
+      class="subscribe-form"
+      action="https://eastpetehistory.us21.list-manage.com/subscribe/post"
+      method="POST"
+      target="_blank"
+      novalidate
+    >
+      <!-- Required hidden fields -->
+      <input type="hidden" name="u" value="1a1b86dc32e4a70a93ca49c0e">
+      <input type="hidden" name="id" value="0b9bbd1439">
+      <input type="hidden" name="redirect" value="https://eastpetehistory.github.io/thank-you.html">
 
-  <!-- Redirect after submit -->
-  <input type="hidden" name="redirect" value="https://eastpetehistory.github.io/thank-you.html">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="MERGE0" required>
 
-  <label>Email address</label>
-  <input type="email" name="MERGE0" required>
+      <label for="fname">First name</label>
+      <input type="text" id="fname" name="MERGE1">
 
-  <label>First name</label>
-  <input type="text" name="MERGE1">
+      <label for="lname">Last name</label>
+      <input type="text" id="lname" name="MERGE2">
 
-  <label>Last name</label>
-  <input type="text" name="MERGE2">
+      <!-- Bot protection -->
+      <div style="position:absolute; left:-5000px;" aria-hidden="true">
+        <input
+          type="text"
+          name="b_1a1b86dc32e4a70a93ca49c0e_0b9bbd1439"
+          tabindex="-1">
+      </div>
 
-  <!-- Bot protection -->
-  <div style="position:absolute; left:-5000px;" aria-hidden="true">
-    <input type="text" name="b_1a1b86dc32e4a70a93ca49c0e_0b9bbd1439" tabindex="-1">
-  </div>
-
-  <button type="submit">Subscribe</button>
-</form>
-<!-- End Mailchimp Signup Form -->
+      <button type="submit">Subscribe</button>
+    </form>
+    <!-- End Mailchimp Signup Form -->
+  </main>
 
 </body>
 </html>
