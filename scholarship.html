@@ -14,38 +14,57 @@
         h1 { color: #2c3e50; }
         p { text-align: left; line-height: 1.2; }
 
-        /* --- Navigation Menu (FIXED, VALID HTML) --- */
-        nav.menu {
-          display: flex;
-          justify-content: center;
-          gap: 8px;
-          padding: 6px;
-          flex-wrap: nowrap;
-        }
-        .nav-btn {
-          margin: 4px;
-		  display: inline-block;
-          padding: 10px 8px;
-          font-size: 12px;
-          border-radius: 14px;
-          background-color: #2563eb;
-          color: white;
-          text-decoration: none;
-          white-space: nowrap;
-        }
-        .nav-btn:hover {
-          background-color: #1e40af;
-        }
-/* Tablet / small screens */
-@media (max-width: 600px) {
-  nav.menu { flex-wrap: wrap; }
-  .nav-btn { flex: 1 1 45%; text-align: center; font-size: 10px; }
-}
+      /* --- Navigation Menu --- */
+      nav.menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        padding: 6px;
+        flex-wrap: nowrap; /* desktop single row */
+      }
 
-/* Very small phones */
-@media (max-width: 400px) {
-  .nav-btn { flex: 1 1 100%; }
-}
+      nav.menu a {
+        text-decoration: none;
+      }
+
+      nav.menu button {
+        padding: 10px 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: #2563eb;
+        color: white;
+        margin: 6px;
+        white-space: nowrap; /* prevent wrapping inside button */
+      }
+
+      nav.menu button:hover {
+        background-color: #1e40af;
+      }
+
+      /* --- Mobile Responsive Menu --- */
+      @media (max-width: 600px) {
+        nav.menu {
+          flex-wrap: wrap; /* wrap buttons to new lines */
+          gap: 4px;
+          padding: 4px;
+        }
+
+        nav.menu button {
+          padding: 8px 6px;
+          font-size: 12px;
+          flex: 1 1 45%; /* roughly 2 per row */
+          min-width: 120px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        nav.menu button {
+          flex: 1 1 100%; /* stack buttons vertically */
+        }
+      }
 
 .action-btn {
   font-size: 12px;
@@ -60,18 +79,23 @@
   </head>
   <body>
      
-  <nav class="menu">
-  <a href="index.html" class="nav-btn">HOME</a>
-  <a href="support.html" class="nav-btn">Support EPHS</a>
-  <a href="events.html" class="nav-btn">Program Events</a>
-  <a href="scholarship.html" class="nav-btn">Scholarship</a>
-  <a href="museum.html" class="nav-btn">Museum Index</a>
-  <a href="subscribe.html" class="nav-btn">Subscribe</a>
-  </nav> 
- 
+    <nav class="menu">
+      <a href="index.html"><button>HOME</button></a>
+      <a href="support.html"><button>Support EPHS</button></a>
+      <a href="events.html"><button>Program Events</button></a>
+      <a href="scholarship.html"><button>Scholarship</button></a>
+      <a href="museum.html"><button>Museum Index</button></a>
+      <a href="subscribe.html"><button>Subscribe</button></a>
+    </nav>
+
     <header>
       <h1>A L B Scholarship</h1>
-      <img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="25%" style="display:block; margin: 1em auto;">
+      <img
+        src="images/ephs-logo-outline-orig.webp"
+        alt="EPHS Logo"
+        width="25%"
+        style="display:block; margin: 1em auto;"
+      >
     </header>
 
     <main>
