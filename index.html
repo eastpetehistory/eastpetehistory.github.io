@@ -1,127 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" type="images/png" href="image/EPHS_Logo_w 48x48px.png">
+    <link
+      rel="icon"
+      type="images/png"
+      href="image/EPHS_Logo_w 48x48px.png"
+    >
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
     <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
     <meta name="dcterms.created" content="Sun, 02 Nov 2025 01:11:41 GMT">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>EPHS</title>         
+
+    <title>EPHS</title>
+
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
-        header { text-align: center; margin-bottom: 2em; }
-        h1 { color: #2c3e50; }
-        p { text-align: left; line-height: 1.2; }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: lightblue;
+      }
 
-        /* --- Navigation Menu (FIXED, VALID HTML) --- */
+      header {
+        text-align: center;
+        margin-bottom: 2em;
+      }
+
+      h1 {
+        color: #2c3e50;
+      }
+
+      p {
+        text-align: left;
+        line-height: 1.2;
+      }
+
+      /* --- Navigation Menu --- */
+      nav.menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        padding: 6px;
+        flex-wrap: nowrap; /* desktop single row */
+      }
+
+      nav.menu a {
+        text-decoration: none;
+      }
+
+      nav.menu button {
+        padding: 10px 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: #2563eb;
+        color: white;
+        margin: 6px;
+        white-space: nowrap; /* prevent wrapping inside button */
+      }
+
+      nav.menu button:hover {
+        background-color: #1e40af;
+      }
+
+      /* --- Mobile Responsive Menu --- */
+      @media (max-width: 600px) {
         nav.menu {
-          display: flex;
-          justify-content: center;
-          gap: 8px;
-          padding: 6px;
-          flex-wrap: nowrap;
+          flex-wrap: wrap; /* wrap buttons to new lines */
+          gap: 4px;
+          padding: 4px;
         }
-        .nav-btn {
-          margin: 4px;
-		  display: inline-block;
-          padding: 10px 8px;
+
+        nav.menu button {
+          padding: 8px 6px;
           font-size: 12px;
-          border-radius: 14px;
-          background-color: #2563eb;
-          color: white;
-          text-decoration: none;
-          white-space: nowrap;
+          flex: 1 1 45%; /* roughly 2 per row */
+          min-width: 120px;
         }
-        .nav-btn:hover {
-          background-color: #1e40af;
+      }
+
+      @media (max-width: 400px) {
+        nav.menu button {
+          flex: 1 1 100%; /* stack buttons vertically */
         }
-/* Tablet / small screens */
-@media (max-width: 600px) {
-  nav.menu { flex-wrap: wrap; }
-  .nav-btn { flex: 1 1 45%; text-align: center; font-size: 10px; }
-}
+      }
 
-/* Very small phones */
-@media (max-width: 400px) {
-  .nav-btn { flex: 1 1 100%; }
-}
-
-.action-btn {
-  font-size: 12px;
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 14px;
-  background-color: #2563eb;
-  color: white;
-  text-decoration: none;
-}
+      .action-btn {
+        font-size: 12px;
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 14px;
+        background-color: #2563eb;
+        color: white;
+        text-decoration: none;
+      }
     </style>
   </head>
+
   <body>
-     
-  <nav class="menu">
-  <a href="index.html" class="nav-btn">HOME</a>
-  <a href="support.html" class="nav-btn">Support EPHS</a>
-  <a href="events.html" class="nav-btn">Program Events</a>
-  <a href="scholarship.html" class="nav-btn">Scholarship</a>
-  <a href="museum.html" class="nav-btn">Museum Index</a>
-  <a href="subscribe.html" class="nav-btn">Subscribe</a>
-  </nav> 
- 
+    <nav class="menu">
+      <a href="index.html"><button>HOME</button></a>
+      <a href="support.html"><button>Support EPHS</button></a>
+      <a href="events.html"><button>Program Events</button></a>
+      <a href="scholarship.html"><button>Scholarship</button></a>
+      <a href="museum.html"><button>Museum Index</button></a>
+      <a href="subscribe.html"><button>Subscribe</button></a>
+    </nav>
+
     <header>
       <h1>Welcome to East Petersburg Historical Society</h1>
-      <img src="images/ephs-logo-outline-orig.webp" alt="EPHS Logo" width="25%" style="display:block; margin: 1em auto;">
-      <img src="images/EPHS Working Gardens 16x9.jpg" alt="EPHS WG 16x9" width="80%" style="display:block; margin: 1em auto;">
-   </header>
+
+      <img
+        src="images/ephs-logo-outline-orig.webp"
+        alt="EPHS Logo"
+        width="25%"
+        style="display:block; margin: 1em auto;"
+      >
+
+      <img
+        src="images/EPHS Working Gardens 16x9.jpg"
+        alt="EPHS WG 16x9"
+        width="80%"
+        style="display:block; margin: 1em auto;"
+      >
+    </header>
 
     <main>
-	    <h2>About Us </h2>
-	    <p> Founded in 1974, our non-profit mission is uncovering, preserving and sharing the history of our community 
-		and the surrounding area. </p>
-	    <p> Our <strong>Museum</strong> at 1905 State Street is the historic Wolf House located on the NE corner Lemon 
-		and State streets in East Petersburg with free parking behind the building off of Lemon Street. </p>
-	    <p> We are open to the public each <strong>first Saturday of the month</strong> from <strong>9:00 AM to Noon</strong>.  
-          Visits are also welcome by request or any time you see our OPEN flag out, just walk right in the front door. </p> 
-      <section style="background-color: #ffe4b5; padding: 10px;">
+      <h2>About Us</h2>
 
+      <p>
+        Founded in 1974, our non-profit mission is uncovering, preserving and sharing
+        the history of our community and the surrounding area.
+      </p>
+
+      <p>
+        Our <strong>Museum</strong> at 1905 State Street is the historic Wolf House located
+        on the NE corner Lemon and State streets in East Petersburg with free parking
+        behind the building off of Lemon Street.
+      </p>
+
+      <p>
+        We are open to the public each <strong>first Saturday of the month</strong> from
+        <strong>9:00 AM to Noon</strong>. Visits are also welcome by request or any time
+        you see our OPEN flag out, just walk right in the front door.
+      </p>
+
+      <section style="background-color: #ffe4b5; padding: 10px;">
         <h2>Contact Us</h2>
+
         <h3>email</h3>
-		
-        <p> General Inquiry &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:info@eastpetehistory.org" 
-		class="action-btn">info@eastpetehistory.org</a> </p>
-		
-		<p> EPHS President &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:maurersiv@gmail.com?subject=Website%20Inquiry&body=Hello%20Sam%2C%20I%20have%20a%20question..." 
-		class="action-btn">Samuel Maurer IV</a> </p>
-		
-        <p>Wolf House Museum &nbsp;&nbsp;<a href="mailto:ephs1905@gmail.com?subject=Website%20Inquiry&body=Hello%20Mark%2C%20I%20have%20a%20question..." 
-		class="action-btn"> Archivist/Curator/WebAdmin</a></p>   
-		
+
+        <p>
+          General Inquiry
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a
+            href="mailto:info@eastpetehistory.org"
+            class="action-btn"
+          >
+            info@eastpetehistory.org
+          </a>
+        </p>
+
+        <p>
+          EPHS President
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a
+            href="mailto:maurersiv@gmail.com?subject=Website%20Inquiry&body=Hello%20Sam%2C%20I%20have%20a%20question..."
+            class="action-btn"
+          >
+            Samuel Maurer IV
+          </a>
+        </p>
+
+        <p>
+          Wolf House Museum
+          &nbsp;&nbsp;
+          <a
+            href="mailto:ephs1905@gmail.com?subject=Website%20Inquiry&body=Hello%20Mark%2C%20I%20have%20a%20question..."
+            class="action-btn"
+          >
+            Archivist/Curator/WebAdmin
+          </a>
+        </p>
+
         <h3>Phone</h3>
-        <p>The previous EPHS phone number ending in 9048 is no longer available; voice messaging is not presently supported.</p>
+
+        <p>
+          The previous EPHS phone number ending in 9048 is no longer available;
+          voice messaging is not presently supported.
+        </p>
 
         <h3>Address</h3>
-        <p>East Petersburg Historical Society <br> 1905 State Street <br> P.O. Box 332 <br> East Petersburg, PA 17520 </p>
 
-		<!-- Google Maps Link Icon -->
-<a href="https://www.google.com/maps/search/?api=1&query=1905+State+Street+East+Petersburg+PA+17520" 
-   target="_blank" rel="noopener noreferrer"
-   style="display:inline-block; text-decoration:none; margin:5px;">
-  <!-- Map Pin SVG Icon -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#EA4335">
-    <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zm0 9.5c-1.381 0-2.5-1.119-2.5-2.5S10.619 6.5 12 6.5 14.5 7.619 14.5 9 13.381 11.5 12 11.5z"/>
-  </svg>
-</a>
-		
-<!-- Facebook Button -->
-<a href="https://www.facebook.com/EastPeteHistory/" target="_blank" rel="noopener noreferrer" 
-   style="display:inline-block; text-decoration:none; margin:5px;">
-  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#1877F2">
-    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.325 24H12v-9.294H9.294v-3.623H12V8.408c0-2.675 1.633-4.13 4.019-4.13 1.142 0 2.123.085 2.409.123v2.796h-1.654c-1.298 0-1.551.617-1.551 1.522v1.998h3.104l-.404 3.623h-2.7V24h5.293c.73 0 1.324-.594 1.324-1.326V1.326C24 .593 23.406 0 22.675 0z"/>
-  </svg>
-</a>
+        <p>
+          East Petersburg Historical Society <br>
+          1905 State Street <br>
+          P.O. Box 332 <br>
+          East Petersburg, PA 17520
+        </p>
 
+        <!-- Google Maps Link Icon -->
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=1905+State+Street+East+Petersburg+PA+17520"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="display:inline-block; text-decoration:none; margin:5px;"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="#EA4335"
+          >
+            <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zm0 9.5c-1.381 0-2.5-1.119-2.5-2.5S10.619 6.5 12 6.5 14.5 7.619 14.5 9 13.381 11.5 12 11.5z"/>
+          </svg>
+        </a>
+
+        <!-- Facebook Button -->
+        <a
+          href="https://www.facebook.com/EastPeteHistory/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="display:inline-block; text-decoration:none; margin:5px;"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="#1877F2"
+          >
+            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.325 24H12v-9.294H9.294v-3.623H12V8.408c0-2.675 1.633-4.13 4.019-4.13 1.142 0 2.123.085 2.409.123v2.796h-1.654c-1.298 0-1.551.617-1.551 1.522v1.998h3.104l-.404 3.623h-2.7V24h5.293c.73 0 1.324-.594 1.324-1.326V1.326C24 .593 23.406 0 22.675 0z"/>
+          </svg>
+        </a>
       </section>
     </main>
   </body>
