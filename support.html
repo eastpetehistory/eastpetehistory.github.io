@@ -16,110 +16,131 @@
 
     <title>Support EPHS</title>
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-        background-color: lightblue;
-      }
+<style>
+  /* --- Historic Parchment Background --- */
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: Arial, sans-serif; /* keep your original font */
+    color: #222; /* darker text for readability */
+  }
 
-      header {
-        text-align: center;
-        margin-bottom: 2em;
-      }
+  body {
+    /* Background parchment image */
+    background-image: url("images/old-sheet-of-paper-1427188.jpg");
+    background-size: cover;          /* stretch to fill screen */
+    background-position: top center; /* keep top visible */
+    background-repeat: no-repeat;    /* no tiling */
+    background-attachment: fixed;    /* optional: stays in place when scrolling */
+    
+    margin: 40px; /* preserve your original spacing */
+  }
 
-      h1,
-      h2,
-      h3 {
-        color: #2c3e50;
-      }
+  header {
+    text-align: center;
+    margin-bottom: 2em;
+  }
 
-      p,
-      ul,
-      li,
-      label {
-        text-align: left;
-        line-height: 1.3;
-        margin-bottom: 1em;
-      }
+  h1,
+  h2,
+  h3 {
+    color: #2c3e50;
+  }
 
-      /* --- Centered Images --- */
-      header img {
-        display: block;
-        margin: 1em auto;
-      }
+  p,
+  ul,
+  li,
+  label {
+    text-align: left;
+    line-height: 1.3;
+    margin-bottom: 1em;
+  }
 
-      /* --- Navigation Menu --- */
-      nav.menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        padding: 6px;
-        flex-wrap: nowrap;
-      }
+  /* --- Centered Images --- */
+  header img {
+    display: block;
+    margin: 1em auto;
+  }
 
-      nav.menu a {
-        text-decoration: none;
-      }
+  /* --- Navigation Menu --- */
+  nav.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    flex-wrap: nowrap;
+  }
 
-      nav.menu button {
-        padding: 10px 10px;
-        font-size: 12px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        background-color: #2563eb;
-        color: white;
-        margin: 6px;
-        white-space: nowrap;
-      }
+  nav.menu a {
+    text-decoration: none;
+  }
 
-      nav.menu button:hover {
-        background-color: #1e40af;
-      }
+  nav.menu button {
+    padding: 10px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #2563eb;
+    color: white;
+    margin: 6px;
+    white-space: nowrap;
+  }
 
-      /* --- Responsive Menu --- */
-      @media (max-width: 600px) {
-        nav.menu {
-          flex-wrap: wrap;
-          gap: 4px;
-          padding: 4px;
-        }
+  nav.menu button:hover {
+    background-color: #1e40af;
+  }
 
-        nav.menu button {
-          flex: 1 1 45%;
-          min-width: 120px;
-          padding: 8px 6px;
-          font-size: 12px;
-        }
-      }
+  /* --- Responsive Menu --- */
+  @media (max-width: 600px) {
+    nav.menu {
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 4px;
+    }
 
-      @media (max-width: 400px) {
-        nav.menu button {
-          flex: 1 1 100%;
-        }
-      }
+    nav.menu button {
+      flex: 1 1 45%;
+      min-width: 120px;
+      padding: 8px 6px;
+      font-size: 12px;
+    }
+  }
 
-      /* --- Bullet List Fix: perfectly aligned, responsive --- */
-      ul {
-        list-style: disc inside;
-        margin-left: 0;
-        padding-left: 1.5em;
-      }
+  @media (max-width: 400px) {
+    nav.menu button {
+      flex: 1 1 100%;
+    }
+  }
 
-      ul li {
-        display: block;
-        margin-bottom: 0.5em;
-        word-wrap: break-word;
-      }
+  /* --- Bullet List Fix: perfectly aligned, responsive --- */
+  ul {
+    list-style: disc inside;
+    margin-left: 0;
+    padding-left: 1.5em;
+  }
 
-      ul li br {
-        content: "";
-        display: block;
-        margin-bottom: 0.2em;
-      }
-    </style>
+  ul li {
+    display: block;
+    margin-bottom: 0.5em;
+    word-wrap: break-word;
+  }
+
+  ul li br {
+    content: "";
+    display: block;
+    margin-bottom: 0.2em;
+  }
+
+  /* --- Optional content wrapper if needed --- */
+  .content {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+  }
+</style>
   </head>
 
   <body>
