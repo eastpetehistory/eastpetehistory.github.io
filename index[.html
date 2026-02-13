@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EPHS</title>
+
+  <link rel="icon" type="image/png" href="images/EPHS_Logo_w 48x48px.png">
+
+  <style>
+    /* --- Base Page --- */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #222;
+    }
+
+    body {
+      background-color: #e8dfc8;
+      padding: 2rem 0;
+    }
+
+    /* --- Parchment Container --- */
+    .parchment {
+      width: min(95%, 1000px);
+      margin: auto;
+
+      /* IMPORTANT: controls inside spacing */
+      padding: 4rem 5rem;
+
+      background-image: url("images/old-sheet-of-paper-1427188.jpg");
+      background-size: 100% 100%; /* stretch to fit container exactly */
+      background-position: top center;
+      background-repeat: no-repeat;
+
+      box-shadow: 0 10px 40px rgba(0,0,0,.25);
+      border-radius: 6px;
+
+      box-sizing: border-box; /* ensures padding stays inside */
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    /* --- Navigation --- */
+    nav.menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      flex-wrap: wrap; /* <-- allow wrapping at ALL sizes */
+    }
+
+    nav.menu a {
+      text-decoration: none;
+    }
+
+    nav.menu button {
+      padding: 10px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #2563eb;
+      color: white;
+      margin: 6px;
+    }
+
+    nav.menu button:hover {
+      background-color: #1e40af;
+    }
+
+    @media (max-width: 600px) {
+      nav.menu {
+        flex-wrap: wrap;
+      }
+
+      nav.menu button {
+        flex: 1 1 45%;
+        font-size: 12px;
+        padding: 8px 6px;
+        min-width: 120px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      nav.menu button {
+        flex: 1 1 100%;
+      }
+    }
+
+    .action-btn {
+      font-size: 12px;
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 14px;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Visitor counter alignment */
+    .counter-right {
+      text-align: right;
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+
+    .sponsors {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .sponsor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="parchment">
+
+    <!-- Navigation -->
+    <nav class="menu">
+      <a href="index.html"><button>HOME</button></a>
+      <a href="support.html"><button>Support EPHS</button></a>
+      <a href="events.html"><button>Program Events</button></a>
+      <a href="scholarship.html"><button>Scholarship</button></a>
+      <a href="museum.html"><button>Museum Index</button></a>
+      <a href="subscribe.html"><button>Subscribe</button></a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <h1>Welcome to East Petersburg Historical Society</h1>
+
+      <img src="images/ephs-logo-outline-orig.webp"
+           alt="EPHS Logo"
+           style="width:25%; display:block; margin:1em auto;">
+
+      <img src="images/EPHS Working Gardens 16x9.jpg"
+           alt="EPHS Working Gardens"
+           style="width:100%; display:block; margin:1em auto;">
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+      <h2>About Us</h2>
+
+      <p>
+        Founded in 1974, our non-profit mission is uncovering, preserving and sharing
+        the history of our community and the surrounding area.
+      </p>
+
+      <p>
+        Our <strong>Museum</strong> at 1905 State Street is the historic Wolf House located
+        on the NE corner of Lemon and State streets in East Petersburg with free parking
+        behind the building off Lemon Street.
+      </p>
+
+      <p>
+        We are open to the public each <strong>first Saturday of the month</strong> from
+        <strong>9:00 AM to Noon</strong>. Visits are also welcome by request or any time
+        you see our OPEN flag out — just walk right in the front door.
+      </p>
+
+      <!-- Contact Section -->
+      <section style="background-color: lightblue; padding: 15px; border-radius: 20px;">
+
+        <h2>Contact Us</h2>
+
+        <h3>Email</h3>
+
+        <p>
+          General Inquiry
+          <a href="mailto:info@eastpetehistory.org" class="action-btn">
+            info@eastpetehistory.org
+          </a>
+        </p>
+
+        <p>
+          EPHS President
+          <a href="mailto:maurersiv@gmail.com?subject=Website%20Inquiry"
+             class="action-btn">
+            Samuel Maurer IV
+          </a>
+        </p>
+
+        <p>
+          Wolf House Museum
+          <a href="mailto:ephs1905@gmail.com?subject=Website%20Inquiry"
+             class="action-btn">
+            Archivist / Curator / WebAdmin
+          </a>
+        </p>
+
+        <h3>Address</h3>
+        <p>
+          East Petersburg Historical Society<br>
+          1905 State Street<br>
+          P.O. Box 332<br>
+          East Petersburg, PA 17520
+        </p>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+      <p>
+        &copy; <span id="year"></span> East Petersburg Historical Society.
+        Our application for 501(c)(3) tax-exempt status is currently pending.
+        All rights reserved.
+      </p>
+
+      <div>Supported by:</div>
+
+      <div class="sponsors">
+
+        <div class="sponsor">
+          <div>S Clyde Weaver</div>
+          <img src="images/S_Clyde_Weaver.png" alt="S Clyde Weaver" width="130">
+        </div>
+
+        <div class="sponsor">
+          <div>Steven Dale's Pizzeria & Deli</div>
+          <img src="images/stevendales_sign.webp" alt="Steven Dale's" width="120">
+        </div>
+
+        <div class="sponsor">
+          <div>Two Cousins</div>
+          <img src="images/TwoCousin_250x150-dropshadow.png" alt="Two Cousins" width="70">
+        </div>
+
+      </div>
+
+      <!-- Auto Year Script -->
+      <script>
+        document.getElementById("year").textContent =
+          new Date().getFullYear();
+      </script>
+
+      <!-- Visitor Counter -->
+      <div class="counter-right">
+        <a href="https://www.free-counters.org/">free HitCounters</a>
+        <script src="https://www.freevisitorcounters.com/auth.php?id=7be045559155d7544fa294b26ba8cd1c4e4d0430"></script>
+        <script src="https://www.freevisitorcounters.com/en/home/counter/1500952/t/6"></script>
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
