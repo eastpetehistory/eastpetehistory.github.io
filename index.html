@@ -22,23 +22,26 @@
     }
 
     /* --- Parchment Container --- */
-    .parchment {
-      width: min(95%, 1000px);
-      margin: auto;
+/* Desktop default */
+.parchment {
+  width: min(95%, 1000px);
+  margin: auto;
+  padding: 4rem 4rem;
+  background-image: url("images/Background scroll III.jpg");
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 40px rgba(0,0,0,.25);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
 
-      /* IMPORTANT: controls inside spacing */
-      padding: 4rem 5rem;
-
-      background-image: url("images/Background scroll III.jpg");
-      background-size: 100% 100%; /* stretch to fit container exactly */
-      background-position: top center;
-      background-repeat: no-repeat;
-
-      box-shadow: 0 10px 40px rgba(0,0,0,.25);
-      border-radius: 6px;
-
-      box-sizing: border-box; /* ensures padding stays inside */
-    }
+/* Mobile */
+@media (max-width: 768px) {
+  .parchment {
+    padding: 2rem 1.0rem; /* smaller left & right space */
+  }
+}
 
     header {
       text-align: center;
