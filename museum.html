@@ -4,7 +4,7 @@
     <link
       rel="icon"
       type="images/png"
-      href="images/EPHS_Logo_w 48x48px.png"
+      href="images/EPHS_Logo_w48x48px.png"
     >
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,76 +14,148 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>Museum Archive & Collections</title>         
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: lightblue; }
-        header { text-align: center; margin-bottom: 2em; }
-        h1 { color: #2c3e50; }
-        p { text-align: left; line-height: 1.2; }
-      /* --- Navigation Menu --- */
-      nav.menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        padding: 6px;
-        flex-wrap: nowrap; /* desktop single row */
-      }
 
-      nav.menu a {
-        text-decoration: none;
+  <style>
+    /* --- Base Page --- */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #222;
+    }
+
+    body {
+      background-color: #e8dfc8;
+      padding: 2rem 0;
+    }
+
+    /* --- Parchment Container --- */
+/* Desktop default */
+.parchment {
+  width: min(95%, 1000px);
+  margin: auto;
+  padding: 4rem 5rem;
+  background-image: url("images/ParchmentBackground_II.jpg");
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 40px rgba(0,0,0,.25);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .parchment {
+    padding: 2rem 1.5rem; /* smaller left & right space */
+  }
+}
+
+    header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    /* --- Navigation --- */
+    nav.menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      flex-wrap: wrap; /* <-- allow wrapping at ALL sizes */
+    }
+
+    nav.menu a {
+      text-decoration: none;
+    }
+
+    nav.menu button {
+      padding: 10px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #2563eb;
+      color: white;
+      margin: 6px;
+    }
+
+    nav.menu button:hover {
+      background-color: #1e40af;
+    }
+
+    @media (max-width: 600px) {
+      nav.menu {
+        flex-wrap: wrap;
       }
 
       nav.menu button {
-        padding: 10px 10px;
-        font-size: 14px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        background-color: #2563eb;
-        color: white;
-        margin: 6px;
-        white-space: nowrap; /* prevent wrapping inside button */
-      }
-
-      nav.menu button:hover {
-        background-color: #1e40af;
-      }
-
-      /* --- Mobile Responsive Menu --- */
-      @media (max-width: 600px) {
-        nav.menu {
-          flex-wrap: wrap; /* wrap buttons to new lines */
-          gap: 4px;
-          padding: 4px;
-        }
-
-        nav.menu button {
-          padding: 8px 6px;
-          font-size: 12px;
-          flex: 1 1 45%; /* roughly 2 per row */
-          min-width: 120px;
-        }
-      }
-
-      @media (max-width: 400px) {
-        nav.menu button {
-          flex: 1 1 100%; /* stack buttons vertically */
-        }
-      }
-        }
-        .action-btn {
+        flex: 1 1 45%;
         font-size: 12px;
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 14px;
-        background-color: #2563eb;
-        color: white;
-        text-decoration: none;
-        }
-    </style>
+        padding: 8px 6px;
+        min-width: 120px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      nav.menu button {
+        flex: 1 1 100%;
+      }
+    }
+
+    .action-btn {
+      font-size: 12px;
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 14px;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Visitor counter alignment */
+    .counter-right {
+      text-align: right;
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+
+    .sponsors {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .sponsor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+
   </head>
   <body>
-     
+    <div class="parchment">
+   
     <nav class="menu">
       <a href="index.html"><button>HOME</button></a>
       <a href="support.html"><button>Support EPHS</button></a>
@@ -98,7 +170,7 @@
       <img
         src="images/ephs-logo-outline-orig.webp"
         alt="EPHS Logo"
-        width="25%"
+        width="20%"
         style="display:block; margin: 1em auto;"
       >
    </header>
@@ -114,6 +186,8 @@
 		<a href="https://drive.google.com/file/d/1L7BZdrgS2HBFArNnCVlOqbueig15Aqz1/view?usp=sharing">
         <button>Deed of Gift form</button></a></h3>
     </main>
+  
+  </div>
 
   </body>
 </html>
