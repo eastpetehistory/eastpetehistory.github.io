@@ -41,142 +41,157 @@
 
   <link rel="icon" type="image/png" href="images/EPHS_Logo_w48x48px.png">
 
-  <style>
-    /* --- Base Page --- */
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: #222;
-    }
-
-    body {
-      background-color: #e8dfc8;
-      padding: 2rem 0;
-    }
-
-    /* --- Parchment Container --- */
-/* Desktop default */
-.parchment {
-  width: min(95%, 1000px);
-  margin: auto;
-  padding: 4rem 5rem;
-  background-image: url("images/ParchmentBackground_III.jpg");
-  background-size: 100% 100%;
-  background-position: top center;
-  background-repeat: no-repeat;
-  box-shadow: 0 10px 40px rgba(0,0,0,.25);
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .parchment {
-    padding: 2rem 1.5rem; /* smaller left & right space */
+<style>
+  /* --- Base Page --- */
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
   }
-}
 
-    header {
-      text-align: center;
-      margin-bottom: 2em;
+  body {
+    background-color: #e8dfc8;
+    padding: 2rem 0;
+  }
+
+  /* --- Parchment Container --- */
+  .parchment {
+    width: min(95%, 1000px);
+    margin: auto;
+    padding: 4rem 5rem;
+    background-image: url("images/ParchmentBackground_III.jpg");
+    background-size: 100% 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 40px rgba(0,0,0,.25);
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .parchment {
+      padding: 2rem 1.5rem;
     }
+  }
 
-    h1 {
-      color: #2c3e50;
-    }
+  header {
+    text-align: center;
+    margin-bottom: 2em;
+  }
 
-    p {
-      line-height: 1.4;
-    }
+  h1 {
+    color: #2c3e50;
+  }
 
-    /* --- Navigation --- */
-    nav.menu {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      padding: 6px;
-      flex-wrap: wrap; /* <-- allow wrapping at ALL sizes */
-    }
+  p {
+    line-height: 1.4;
+  }
 
-    nav.menu a {
-      text-decoration: none;
-    }
+  /* --- Navigation --- */
+  nav.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    flex-wrap: wrap;
+  }
 
+  nav.menu a {
+    text-decoration: none;
+  }
+
+  nav.menu button {
+    padding: 10px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #2563eb;
+    color: white;
+    margin: 6px;
+  }
+
+  nav.menu button:hover {
+    background-color: #1e40af;
+  }
+
+  @media (max-width: 600px) {
     nav.menu button {
-      padding: 10px 10px;
-      font-size: 14px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background-color: #2563eb;
-      color: white;
-      margin: 6px;
-    }
-
-    nav.menu button:hover {
-      background-color: #1e40af;
-    }
-
-    @media (max-width: 600px) {
-      nav.menu {
-        flex-wrap: wrap;
-      }
-
-      nav.menu button {
-        flex: 1 1 45%;
-        font-size: 12px;
-        padding: 8px 6px;
-        min-width: 120px;
-      }
-    }
-
-    @media (max-width: 400px) {
-      nav.menu button {
-        flex: 1 1 100%;
-      }
-    }
-
-    .action-btn {
+      flex: 1 1 45%;
       font-size: 12px;
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 14px;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
+      padding: 8px 6px;
+      min-width: 120px;
     }
+  }
 
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
+  @media (max-width: 400px) {
+    nav.menu button {
+      flex: 1 1 100%;
     }
+  }
 
-    /* Visitor counter alignment */
-    .counter-right {
-      text-align: right;
-      font-size: 0.8rem;
-      opacity: 0.7;
-      margin-top: 1rem;
-    }
+  .action-btn {
+    font-size: 12px;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 14px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+  }
 
+  footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  /* Visitor counter alignment */
+  .counter-right {
+    text-align: right;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+  }
+
+  /* --- Sponsors --- */
+  .sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;                 /* spacing between sponsor logos */
+    margin-top: 1.5rem;
+  }
+
+  .sponsor {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+
+  .sponsor img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .sponsor img:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
     .sponsors {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 1.5rem;
+      gap: 16px;
     }
+  }
+</style>
 
-    .sponsor {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  </style>
 </head>
 
 <body>
@@ -316,28 +331,29 @@
 	  <p>
         &copy; <span id="year"></span> All rights reserved.
   	  </p>
-    
 
-      <div>Supported by:</div>
+ <div>Supported by:</div>
 
-      <div class="sponsors">
+<div class="sponsors">
 
-        <div class="sponsor">
-          <div>S Clyde Weaver</div>
-          <img src="images/S_Clyde_Weaver.png" alt="S Clyde Weaver" width="130">
-        </div>
+  <a class="sponsor" href="https://sclydeweaver.com/" target="_blank" rel="noopener noreferrer">
+    <img src="images/S_Clyde_Weaver.png" alt="S Clyde Weaver" width="130">
+  </a>
 
-        <div class="sponsor">
-          <div>Steven Dale's Pizzeria & Deli</div>
-          <img src="images/stevendales_sign.webp" alt="Steven Dale's" width="120">
-        </div>
+  <a class="sponsor" href="https://stevendalespizza.com/" target="_blank" rel="noopener noreferrer">
+    <img src="images/StevenDales_sign.png" alt="Steven Dale's Pizzeria & Deli" width="120">
+  </a>
 
-        <div class="sponsor">
-          <div>Two Cousins</div>
-          <img src="images/TwoCousin_250x150-dropshadow.png" alt="Two Cousins" width="70">
-        </div>
+  <a class="sponsor" href="https://twocousinspizzaep.com/" target="_blank" rel="noopener noreferrer">
+    <img src="images/TwoCousin_250x150-dropshadow.png" alt="Two Cousins" width="70">
+  </a>
 
-      </div>
+  <a class="sponsor" href="https://www.facebook.com/p/Legacy-Fine-Craftsmen-LLC-61569984328263/"
+     target="_blank" rel="noopener noreferrer">
+    <img src="images/Legacy_Fine_Craftsmen.png" alt="Legacy Fine Craftsmen" width="105">
+  </a>
+
+</div>
 
       <!-- Auto Year Script -->
       <script>
